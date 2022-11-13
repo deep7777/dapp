@@ -14,7 +14,7 @@ var nodeRoutes = require('./routes/index')
 var niftyRoute = require('./routes/nifty')
 var stocksRoute = require('./routes/stocks')
 var companyRoute = require('./routes/company')
-const port = process.env.PORT || 3000;
+const port = 3000;
 var app = express()
 app.use(cors())
 app.use(bodyParser.json())
@@ -26,7 +26,7 @@ app.use(
     secret: '123@abcd',
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 60 },
   }),
 )
 app.set('view engine', 'html');
